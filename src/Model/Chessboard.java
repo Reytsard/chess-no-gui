@@ -11,10 +11,11 @@ public class Chessboard {
 
     private void initChessboard() {
         ArrayList<ArrayList<ChessBox>> chessboard = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
-            ArrayList<ChessBox> row = new ArrayList<>(8);
-            chessboard.add(row);
-        }
+
+//        for (int i = 0; i < 8; i++) {
+//            ArrayList<ChessBox> row = new ArrayList<>(8);
+//            chessboard.add(row);
+//        }
         this.chessboard = chessboard;
     }
 }

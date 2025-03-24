@@ -2,16 +2,14 @@ package Model;
 
 public abstract class ChessPiece {
     private ChessType chessType;
-    private ChessBox chessBox;
 
-    public ChessPiece(ChessType chessType, ChessBox chessBox) {
+    public ChessPiece(ChessType chessType) {
         this.chessType = chessType;
-        this.chessBox = chessBox;
     }
 
-    abstract void move();
+    abstract void move(ChessBox from, ChessBox to) throws MoveOutOfBoundsException;
 
-    abstract ChessPiece capture();
+    abstract ChessPiece capture(ChessBox boxToCapture);
 
     public ChessType getChessType() {
         return chessType;
@@ -21,11 +19,4 @@ public abstract class ChessPiece {
         this.chessType = chessType;
     }
 
-    public ChessBox getChessBox() {
-        return chessBox;
-    }
-
-    public void setChessBox(ChessBox chessBox) {
-        this.chessBox = chessBox;
-    }
 }

@@ -3,11 +3,19 @@ package Model;
 public class ChessBox {
     private ChessColumn chessColumn;
     private int chessRow;
-    public ChessBox(ChessColumn chessColumn, int chessRow){
+    private ChessPiece piece;
+    public ChessBox(ChessColumn chessColumn, int chessRow, ChessPiece piece){
         this.chessColumn = chessColumn;
         this.chessRow = chessRow;
+        this.piece = piece;
     }
 
+    public ChessPiece getPiece(){
+        return piece;
+    }
+    public void setPiece(ChessPiece piece){
+        this.piece = piece;
+    }
     public ChessColumn getChessColumn() {
         return chessColumn;
     }

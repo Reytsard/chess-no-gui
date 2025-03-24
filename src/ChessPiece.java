@@ -7,8 +7,8 @@ public abstract class ChessPiece {
         this.side = side;
         this.type = type;
     }
-    abstract void move(ArrayList<ChessBox> possibleMoves, ChessBox to);
-    abstract ArrayList<ChessBox> getPossibleMoves(Chessboard chessboard);
+    abstract void move(ArrayList<ChessBox> possibleMoves, ChessBox from, ChessBox to);
+    abstract ArrayList<ChessBox> getPossibleMoves(Chessboard chessboard, ChessBox currentPosition);
     abstract ChessPiece capture(Chessboard chessboard, ChessBox boxToCapture);
 
     public ChessSide getSide() {

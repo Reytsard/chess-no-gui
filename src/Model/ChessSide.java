@@ -1,6 +1,6 @@
 package Model;
 
 public enum ChessSide {
-    BLACK,
+    BLACK ,
     WHITE
 }
